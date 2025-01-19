@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
         - name: fakeshop
-          image: robelio/fake-shop:rumoaelite # Imagem da aplicação no Docker Hub
+          image: robelio/fake-shop:v1 # Imagem da aplicação no Docker Hub
           ports:
             - containerPort: 5000
           env: # Variáveis de ambiente necessárias para a aplicação
