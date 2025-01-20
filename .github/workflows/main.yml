@@ -43,7 +43,9 @@ jobs:
           aws-region: us-east-1
 
       - name: configurar o kubectl
-        run: echo "executando aws eks update-kubeconfig"
+        run: aws eks update-kubeconfig  --name aula-eks
+
+
       - name: Deploy dos manifestos no Kubernetes
         run: echo "executando kubectl apply"
         
