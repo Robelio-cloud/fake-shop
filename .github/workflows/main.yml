@@ -58,7 +58,8 @@ jobs:
               ./src/k8s/deployment.yaml
            images: |
               robelio/fake-shop:v${{ github.run_number }}
-              
+
+
         
         
       
