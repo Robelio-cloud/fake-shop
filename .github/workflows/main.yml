@@ -22,7 +22,7 @@ jobs:
         with:
           context: ./src
           push: true
-          file: .src/Dockerfile
+          file: ./src/Dockerfile
           tags: |
             robelio/fake-shop:latest
             rovelio/fake-shop:v${{ github.run_number }}
