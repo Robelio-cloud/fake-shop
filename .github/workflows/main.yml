@@ -17,10 +17,16 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: construcao da imagem docker
-        run: echo "executando docker build"
-      - name: envio da imagem docker
-        run: echo "executando docker push"
+      - name: construcao e envio da imagem docker
+        uses: docker/build-push-action@v6
+        with:
+          context: ./src
+          push: true
+          file: .src/Dockerfile
+          tags: |
+            robelio/fake-shop:latest
+            rovelio/fake-shop:v${{ github.run_number }}
+          
 
   cd:
     runs-on: ubuntu-latest
